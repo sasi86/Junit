@@ -15,9 +15,9 @@ public void testMethod(){
 
 @Test
 
-@Before
+@Before - called before each methods in the test class are executed
 
-@After
+@After - called after each methods in the test class are executed
 
 @BeforeClass - called before any methods in the test class are executed
 
@@ -28,3 +28,7 @@ public void testMethod(){
 @Test(expected=Exception.class)
 
 @Test(timeout=100)
+
+# Assertion Basics
+
+assertArrayEquals
