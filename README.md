@@ -41,7 +41,7 @@ assertSame
 assertNotSame
 fail
 
-# TestSuite
+# TestSuite - used to organize the test
 
 Used to combine multiple test classes to combine and run
 
@@ -52,5 +52,97 @@ Example : for creating TestSuite
 @Suite.SuiteClasses({TestClass1.class,TestClass2.class})
 
 public class TestSuite{
+
+}
+
+public class TestClass1{
+
+  @Test
+  
+  public void test1(){
+
+  }
+  
+  @Test
+  
+  public void test2(){
+
+  }
+
+}
+
+
+public class TestClass2{
+
+  @Test
+  
+  public void test1(){
+
+  }
+  
+  @Test
+  
+  public void test2(){
+
+  }
+
+}
+
+# Catergories -
+
+Used to pick specific test methods from multiple test classes to combine and run
+
+@RunWith(Catgories.class)
+
+@IncludeCategory(PostivieTestCases.class)
+
+@ExcludeCategory(PostivieTestCases.class)
+
+@ExcludeCategory(NegativeTestCases.class)
+
+@Suite.SuiteClasses({TestClass1.class,TestClass2.class})
+
+public class TestSuite{
+
+}
+
+public interface PositiveTestCases{
+
+}
+
+public class TestClass1{
+
+  @Test
+  
+  @Category(PositiveTestCases.class)
+  
+  public void test1(){
+
+  }
+  
+  @Test
+  
+  public void test2(){
+
+  }
+
+}
+
+
+public class TestClass2{
+
+  @Test
+  
+  public void test1(){
+
+  }
+  
+  @Test
+  
+  @Category(PositiveTestCases.class)
+  
+  public void test2(){
+
+  }
 
 }
