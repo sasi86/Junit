@@ -32,3 +32,14 @@ public void testMethod(){
 # Assertion Basics
 
 assertArrayEquals
+assertEquals
+assertTrue
+assertFalse
+assertNull
+assertNotNull
+assertSame
+assertNotSame
+fail
+
+# TestSuite
+
