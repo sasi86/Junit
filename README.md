@@ -43,3 +43,14 @@ fail
 
 # TestSuite
 
+Used to combine multiple test classes to combine and run
+
+Example : for creating TestSuite
+
+@RunWith(Suite.class)
+
+@Suite.SuiteClasses({TestClass1.class,TestClass2.class})
+
+public class TestSuite{
+
+}
