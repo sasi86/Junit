@@ -17,6 +17,6 @@ Basic Annotation - Method Level
 @After
 @BeforeClass - called before any methods in the test class are executed
 @AfterClass - called after all the methods in the test class are executed
-@Ignore
+@Ignore- temproraliy disables the test from being executed
 @Test(expected=Exception.class)
 @Test(timeout=100)
