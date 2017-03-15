@@ -146,3 +146,37 @@ public class TestClass2{
   }
 
 }
+
+# Parameterized Tests
+
+Sometimes we need to run the same test with multiple times with different test data. To overcome writing multiple test method that differ only by input data Junit introduced parameterized test.
+
+
+@RunWith(Parameterized.class)
+public class ParameterTest{
+
+  private int input;
+  private int expected;
+  
+  @parameters
+  public static List<Object> data(){
+    return Array.asList(Object[][]{
+      {5,5},
+      {5,10},
+      {-12,0},
+      {50,50},
+      {1,51}
+    });
+  }
+  
+  public ParameterTest(int input,int expected){
+     this.input = input;
+     this.expected = expected;
+  }
+  
+  @Test
+  public void test(){
+    //code
+  }
+}
+
