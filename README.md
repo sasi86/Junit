@@ -159,7 +159,7 @@ public class ParameterTest{
   private int expected;
   
   @parameters
-  public static List<Object> data(){
+  public static List Object  data(){
     return Array.asList(Object[][]{
       {5,5},
       {5,10},
@@ -176,11 +176,13 @@ public class ParameterTest{
   
   @Test
   public void test(){
-    //code
+    code
   }
 }
 
 # Rule
+
+Rules allow very flexible addition or redefinition of the behavior of each test method in a test class. Testers can reuse or extend one of the provided Rules below, or write their own.
 
 When expecting a exception with message we use Rule instead of @Test(expected=Exception.class)
 
