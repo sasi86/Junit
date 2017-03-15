@@ -180,3 +180,26 @@ public class ParameterTest{
   }
 }
 
+# Rule
+
+When expecting a exception with message we use Rule instead of @Test(expected=Exception.class)
+
+To use rule decalare
+
+@Rule
+
+public ExpectedException thrown = ExpectedException.none();
+
+@Test
+
+public void Test1(){
+  
+   thrown.expect(InvalidNumber.class);
+   
+   thrown.expectMessage("Exception Message");
+   
+   service.setGoal(-5);
+   
+}
+
+
